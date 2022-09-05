@@ -14,3 +14,10 @@ div.justify-content-start.flex-grow-1.pe-3.navbar-nav > a.nav-link.active {
 a.navbar-brand.active {
   color: green;
 }
+
+.backgroundImage {
+  background-image: url("/public/Images/Cocktail_serve.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
