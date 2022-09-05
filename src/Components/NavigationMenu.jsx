@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { NavLink } from "react-router-dom";
+import { Cart3 } from "react-bootstrap-icons";
 
 const NavMenu = () => {
   return (
@@ -29,8 +30,13 @@ const NavMenu = () => {
               <Nav.Link as={NavLink} to="products">
                 Our Products
               </Nav.Link>
-              <Nav.Link as={NavLink} to="shoppingcart">
-                Shopping cart
+              <Nav.Link as={NavLink} to="shoppingcart" className="ms-auto">
+                <Cart3
+                  style={{
+                    height: "2rem",
+                    width: "1.5rem",
+                  }}
+                />
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>
