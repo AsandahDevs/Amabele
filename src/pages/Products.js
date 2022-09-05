@@ -1,10 +1,5 @@
-import { Container } from "react-bootstrap";
 const Products = () => {
-  return (
-    <Container>
-      <h1>Products page</h1>
-    </Container>
-  );
+  return <h1>Products page</h1>;
 };
 
 export default Products;

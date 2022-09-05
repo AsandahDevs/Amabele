@@ -1,10 +1,5 @@
-import { Container } from "react-bootstrap";
 const Home = () => {
-  return (
-    <Container>
-      <h1>Homepage</h1>
-    </Container>
-  );
+  return <h1>Homepage</h1>;
 };
 
 export default Home;
