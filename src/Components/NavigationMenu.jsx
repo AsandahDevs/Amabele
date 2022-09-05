@@ -6,9 +6,15 @@ import { NavLink } from "react-router-dom";
 
 const NavMenu = () => {
   return (
-    <Navbar bg="light" expand="md" className="mb-3">
+    <Navbar bg="light" expand="md" className="mb-3 shadow">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
+          <img
+            src={"/Images/Beer_hop.webp"}
+            alt="Beer_hop"
+            height={30}
+            style={{ borderRadius: "50%" }}
+          />{" "}
           Amabele
         </Navbar.Brand>
         <Navbar.Toggle aria-controls={"offcanvasNavbar-expand-md"} />
