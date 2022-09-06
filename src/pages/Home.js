@@ -1,9 +1,34 @@
+import { useState } from "react";
 import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData((initialFormData) => {
+      return { ...initialFormData, [event.target.name]: event.target.value };
+    });
+  };
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (formData.password === formData.confirmPassword) {
+      navigate("/products");
+    } else {
+      alert("Passwords do not match");
+    }
+  };
   return (
     <Container fluid>
-      <h1 style={{ paddingTop: "1rem" }}>Homepage</h1>
-      <form className="text-center">
+      <h1 style={{ paddingTop: "1rem" }}>Login page</h1>
+      <form className="text-center" onSubmit={handleSubmit}>
         <label>
           Username
           <input
@@ -11,6 +36,8 @@ const Home = () => {
             name="username"
             className="form-control"
             placeholder="Enter your username"
+            onChange={handleChange}
+            value={formData.username}
             required
           />
         </label>
@@ -19,9 +46,11 @@ const Home = () => {
           Password
           <input
             type="password"
-            name="username"
+            name="password"
             className="form-control"
             placeholder="***"
+            onChange={handleChange}
+            value={formData.password}
             required
           />
         </label>
@@ -30,9 +59,11 @@ const Home = () => {
           Confirm password
           <input
             type="password"
-            name="username"
+            name="confirmPassword"
             className="form-control"
             placeholder="***"
+            onChange={handleChange}
+            value={formData.confirmPassword}
             required
           />
         </label>
