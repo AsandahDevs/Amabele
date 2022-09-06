@@ -17,11 +17,11 @@ const Cards = (props) => {
         style={{ height: "10rem", objectFit: "contain" }}
         className="card-img-top"
       />
-      <h2>R{props.price}</h2>
+      <h2 className="text-black">R{props.price}</h2>
       <h3 style={{ fontSize: "medium", color: "grey" }}>
         Category:{props.category}
       </h3>
-      <figcaption className="card-body">
+      <figcaption className="card-body text-black">
         {props.description} {props.litres}
       </figcaption>
       <Badge
@@ -30,6 +30,7 @@ const Cards = (props) => {
           display: "block",
           margin: "auto",
           marginBottom: "0.5rem",
+          marginTop: "-2rem",
         }}
       >
         {props.available ? "in-stock" : "out-of-stock"}
