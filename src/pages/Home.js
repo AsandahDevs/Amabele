@@ -25,9 +25,21 @@ const Home = () => {
       alert("Passwords do not match");
     }
   };
+
+  let day = "";
+  if (day >= 5 && day <= 12) {
+    day += "Good Morning, Sir/Madam";
+  } else if (day > 12 && day <= 17) {
+    day += "Good day, Sir/Madam";
+  } else if (day > 17 && day <= 24) {
+    day += "Good Evening,Sir/Madam";
+  } else {
+    day += "Looks like someone is working night shifts.";
+  }
   return (
     <Container fluid>
       <h1 style={{ paddingTop: "1rem" }}>Login page</h1>
+      <h2 style={{ color: "gray", fontSize: "small" }}>{day}</h2>
       <form className="text-center" onSubmit={handleSubmit}>
         <label>
           Username
