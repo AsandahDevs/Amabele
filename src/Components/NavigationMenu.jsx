@@ -36,6 +36,7 @@ const NavMenu = () => {
                   style={{
                     height: "2rem",
                     width: "1.5rem",
+                    color: "black",
                   }}
                 />
                 <Badge bg="secondary">0</Badge>
