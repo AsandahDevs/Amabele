@@ -28,7 +28,7 @@ const Home = () => {
 
   let day = "";
   if (day >= 5 && day <= 12) {
-    day += "Good Morning, Sir/Madam";
+    day += "Good Morning, Sir/Madam ";
   } else if (day > 12 && day <= 17) {
     day += "Good day, Sir/Madam";
   } else if (day > 17 && day <= 24) {
