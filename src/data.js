@@ -7,12 +7,12 @@ const data = {
       price: 289.99,
       litres: "750ml",
       available: false,
-      image: "/Images/Absolute_vodka.webp",
+      image: "/Images/Absolut_vodka.webp",
     },
     {
       id: 2,
       name: "Amarula fruit cream",
-      category: null,
+      category: "other",
       price: 164.99,
       litres: "750ml",
       available: true,
@@ -29,12 +29,12 @@ const data = {
     },
     {
       id: 4,
-      name: "Ballentines whiskey",
+      name: "Ballantine whiskey",
       category: "whiskey",
       price: 259.0,
       litres: "750ml",
       available: true,
-      image: "/Images/ballentine_whiskey.webp",
+      image: "/Images/Ballantine_whiskey.webp",
     },
     {
       id: 5,
@@ -106,7 +106,7 @@ const data = {
       price: 99.99,
       litres: "1.5L",
       available: true,
-      image: "/Images/Four_cousinsz_red_wine.webp",
+      image: "/Images/Four_cousins_red_wine.webp",
     },
     {
       id: 13,
@@ -187,7 +187,7 @@ const data = {
       price: 344.99,
       litres: "750ml",
       available: true,
-      image: "/Images/johnnie_walker_red_label_blended_scotch_whiskey.webp",
+      image: "/Images/johnnie_walker_red_label_blended_scotch_whisky.webp",
     },
     {
       id: 22,
@@ -277,7 +277,7 @@ const data = {
       price: null,
       litres: "750ml",
       available: false,
-      image: "/Images/smirnoff_rasberry_and_promegranite_cider.webp",
+      image: "/Images/smirnoff_rasberryy_and_promegranite_cider.webp",
     },
     {
       id: 32,
@@ -286,7 +286,7 @@ const data = {
       price: 94.99,
       litres: "330ml",
       available: true,
-      image: "/Images/strongbow_small_rose_cider.webp",
+      image: "/Images/strongbow_small_rose cider.webp",
     },
     {
       id: 33,
