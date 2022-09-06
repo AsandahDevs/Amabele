@@ -4,11 +4,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { NavLink } from "react-router-dom";
 import { Cart3 } from "react-bootstrap-icons";
+import { Badge } from "react-bootstrap";
 
 const NavMenu = () => {
   return (
     <Navbar bg="light" expand="md" className="mb-3 shadow">
-      <Container>
+      <Container fluid>
         <Navbar.Brand as={NavLink} to="/">
           <img
             src={"/Images/Beer_hop.webp"}
@@ -37,6 +38,7 @@ const NavMenu = () => {
                     width: "1.5rem",
                   }}
                 />
+                <Badge bg="secondary">0</Badge>
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>
