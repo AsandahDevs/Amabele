@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("/public/Images/overflowing_beer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
 }
 
 div.justify-content-start.flex-grow-1.pe-3.navbar-nav > a.nav-link.active {
@@ -13,13 +18,6 @@ div.justify-content-start.flex-grow-1.pe-3.navbar-nav > a.nav-link.active {
 
 a.navbar-brand.active {
   color: green;
-}
-
-.backgroundImage {
-  background-image: url("/public/Images/Cocktail_serve.webp");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 /*The below code invokes continuous horizontal scrolling of content*/
