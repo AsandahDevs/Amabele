@@ -21,3 +21,30 @@ a.navbar-brand.active {
   background-attachment: fixed;
   background-position: center;
 }
+
+/*The below code invokes continuous horizontal scrolling of content*/
+
+.horizontal-scroller {
+  display: flex;
+  flex-wrap: nowrap;
+  cursor: grab;
+  overflow-x: scroll; /*Keeps the ability to scroll horizontally*/
+}
+
+/*Hides scrollbar for Chrome,Safari and Opera*/
+
+.horizontal-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.horizontal-scroller {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.card {
+  flex: 0 0 auto;
+}
+
+/*End */
