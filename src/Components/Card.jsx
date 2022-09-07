@@ -30,7 +30,7 @@ const Cards = (props) => {
           display: "block",
           margin: "auto",
           marginBottom: "0.5rem",
-          marginTop: "-2rem",
+          marginTop: "-1rem",
         }}
       >
         {props.available ? "in-stock" : "out-of-stock"}
