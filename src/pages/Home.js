@@ -26,24 +26,9 @@ const Home = () => {
     }
   };
 
-  const date = new Date();
-  const hours = date.getHours();
-
-  let day = "";
-
-  if (hours >= 5 && hours <= 12) {
-    day += "Good Morning, Sir/Madam ";
-  } else if (hours > 12 && hours <= 17) {
-    day += "Good day, Sir/Madam";
-  } else if (hours > 17 && hours <= 23) {
-    day += "Good Evening,Sir/Madam";
-  } else {
-    day += "Looks like someone is working night shifts.";
-  }
   return (
     <Container fluid>
       <h1 style={{ paddingTop: "1rem" }}>Login page</h1>
-      <h2 style={{ color: "gray", fontSize: "small" }}>{day}</h2>
       <form className="text-center" onSubmit={handleSubmit}>
         <label>
           Username
