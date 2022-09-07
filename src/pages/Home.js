@@ -26,12 +26,16 @@ const Home = () => {
     }
   };
 
+  const date = new Date();
+  const hours = date.getHours();
+
   let day = "";
-  if (day >= 5 && day <= 12) {
+
+  if (hours >= 5 && hours <= 12) {
     day += "Good Morning, Sir/Madam ";
-  } else if (day > 12 && day <= 17) {
+  } else if (hours > 12 && hours <= 17) {
     day += "Good day, Sir/Madam";
-  } else if (day > 17 && day <= 24) {
+  } else if (hours > 17 && hours <= 23) {
     day += "Good Evening,Sir/Madam";
   } else {
     day += "Looks like someone is working night shifts.";
