@@ -5,12 +5,11 @@ import Cards from "../Components/Card";
 import data from "../data";
 
 const Products = () => {
-  const { products } = data; //destructured data object
+  const { products } = data;
   const [searchTerm, setSearchTerm] = useState("");
   const captureProductName = (event) => {
     setSearchTerm(event.target.value);
   };
-  //created filter functionality
   const filteredProducts = products.filter((product) => {
     return product.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
