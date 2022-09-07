@@ -1,4 +1,6 @@
-import { Badge, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import InStock from "./InStock";
+import OutOfStock from "./OutOfStock";
 
 const Cards = (props) => {
   return (
@@ -24,19 +26,11 @@ const Cards = (props) => {
       <figcaption className="card-body text-black">
         {props.description} {props.litres}
       </figcaption>
-      <Badge
-        style={{
-          width: "6rem",
-          display: "block",
-          margin: "auto",
-          marginBottom: "0.5rem",
-          marginTop: "-1rem",
-        }}
-      >
-        {props.available ? "in-stock" : "out-of-stock"}
-      </Badge>
+
+      {props.available ? <InStock /> : <OutOfStock />}
+
       <Button
-        variant="success"
+        variant="dark"
         style={{
           borderRadius: "3rem",
           width: "10rem",
