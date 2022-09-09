@@ -30,21 +30,24 @@ const Cards = (props) => {
       </figcaption>
 
       {props.available ? <InStock /> : <OutOfStock />}
-
-      <Button
-        onClick={() => addItem(props.item)}
-        variant="dark"
-        style={{
-          borderRadius: "3rem",
-          width: "10rem",
-          display: "block",
-          margin: "auto",
-          marginBottom: "1rem",
-        }}
-        size="sm"
-      >
-        Add to cart
-      </Button>
+      {props.available ? (
+        <Button
+          onClick={() => addItem(props.item)}
+          variant="dark"
+          style={{
+            borderRadius: "3rem",
+            width: "10rem",
+            display: "block",
+            margin: "auto",
+            marginBottom: "1rem",
+          }}
+          size="sm"
+        >
+          Add to cart
+        </Button>
+      ) : (
+        ""
+      )}
     </figure>
   );
 };
