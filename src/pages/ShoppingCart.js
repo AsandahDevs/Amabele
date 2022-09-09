@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 const ShoppingCart = () => {
   const {
@@ -32,7 +32,24 @@ const ShoppingCart = () => {
                   <td>{item.name}</td>
                   <td>{item.description}</td>
                   <td>Unit price: R{item.price}</td>
-                  <td>Quantity: {item.quantity}</td>
+                  <td>
+                    <Button
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity + 1)
+                      }
+                    >
+                      +
+                    </Button>{" "}
+                    Quantity: {item.quantity}{" "}
+                    <Button
+                      variant="outline-danger"
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity - 1)
+                      }
+                    >
+                      -
+                    </Button>
+                  </td>
                 </tr>
               );
             })}
