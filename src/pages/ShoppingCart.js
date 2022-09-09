@@ -1,13 +1,12 @@
 import { Button, Container } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 import { Badge } from "react-bootstrap";
+import { Cart4 } from "react-bootstrap-icons";
 
 const ShoppingCart = () => {
   const {
     isEmpty,
-    totalUniqueItems,
     items,
-    totalItems,
     cartTotal,
     updateItemQuantity,
     removeItem,
@@ -73,11 +72,17 @@ const ShoppingCart = () => {
             style={{
               color: "GrayText",
               fontSize: "1.5rem",
-              marginLeft: "1rem",
             }}
           >
             Cart total:R {cartTotal}
           </h3>
+          <Button
+            size="sm"
+            className="btn btn-danger"
+            onClick={() => emptyCart()}
+          >
+            Clear cart <Cart4 />
+          </Button>
         </>
       )}
     </Container>
