@@ -17,6 +17,7 @@ const Cards = (props) => {
     >
       <img
         src={props.image}
+        loading="lazy"
         alt={props.alt}
         style={{ height: "10rem", objectFit: "contain" }}
         className="card-img-top"
