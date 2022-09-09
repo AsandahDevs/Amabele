@@ -47,16 +47,17 @@ const Products = () => {
       <div className="horizontal-scroller">
         {filteredProducts.length === 0
           ? "no results found"
-          : filteredProducts.map((product) => (
+          : filteredProducts.map((item) => (
               <Cards
-                key={product.id}
-                image={product.image}
-                alt={product.name}
-                price={product.price}
-                description={product.name}
-                litres={product.litres}
-                category={product.category}
-                available={product.available}
+                key={item.id}
+                image={item.image}
+                alt={item.name}
+                price={item.price}
+                description={item.name}
+                litres={item.litres}
+                category={item.category}
+                available={item.available}
+                item={item}
               />
             ))}
       </div>
