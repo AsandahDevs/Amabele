@@ -1,5 +1,7 @@
 import { Button, Container } from "react-bootstrap";
 import { useCart } from "react-use-cart";
+import { Badge } from "react-bootstrap";
+
 const ShoppingCart = () => {
   const {
     isEmpty,
@@ -42,13 +44,22 @@ const ShoppingCart = () => {
                     </Button>{" "}
                     Quantity: {item.quantity}{" "}
                     <Button
-                      variant="outline-danger"
+                      variant="outline-warning"
                       onClick={() =>
                         updateItemQuantity(item.id, item.quantity - 1)
                       }
                     >
                       -
                     </Button>
+                  </td>
+                  <td>
+                    <Badge
+                      bg="danger"
+                      onClick={() => removeItem(item.id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      x
+                    </Badge>
                   </td>
                 </tr>
               );
