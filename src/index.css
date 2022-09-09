@@ -20,6 +20,9 @@ a.navbar-brand.active {
   color: green;
 }
 
+a.nav-link {
+  color: black;
+}
 /*The below code invokes continuous horizontal scrolling of content*/
 
 .horizontal-scroller {
