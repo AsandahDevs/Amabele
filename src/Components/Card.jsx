@@ -1,8 +1,10 @@
 import { Button } from "react-bootstrap";
 import InStock from "./InStock";
 import OutOfStock from "./OutOfStock";
+import { useCart } from "react-use-cart";
 
 const Cards = (props) => {
+  const { addItem } = useCart();
   return (
     <figure
       className="card"
@@ -30,6 +32,7 @@ const Cards = (props) => {
       {props.available ? <InStock /> : <OutOfStock />}
 
       <Button
+        onClick={() => addItem(props.item)}
         variant="dark"
         style={{
           borderRadius: "3rem",
