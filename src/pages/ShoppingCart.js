@@ -35,8 +35,9 @@ const ShoppingCart = () => {
                       <td>{item.name}</td>
                       <td>{item.description}</td>
                       <td>Unit price: R{item.price}</td>
-                      <td>
+                      <td style={{ fontSize: "15px" }}>
                         <Button
+                          size="sm"
                           onClick={() =>
                             updateItemQuantity(item.id, item.quantity + 1)
                           }
@@ -45,6 +46,7 @@ const ShoppingCart = () => {
                         </Button>{" "}
                         Quantity: {item.quantity}{" "}
                         <Button
+                          size="sm"
                           variant="outline-warning"
                           onClick={() =>
                             updateItemQuantity(item.id, item.quantity - 1)
