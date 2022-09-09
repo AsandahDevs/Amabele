@@ -12,7 +12,7 @@ const NavMenu = () => {
   return (
     <Navbar bg="light" expand="md" className="mb-3 shadow">
       <Container fluid>
-        <Navbar.Brand as={NavLink} to="/">
+        <Navbar.Brand as={NavLink} to="/Amabele/">
           <img
             src={"/Images/Beer_hop.webp"}
             alt="Beer_hop"
