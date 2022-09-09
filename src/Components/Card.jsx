@@ -7,7 +7,7 @@ const Cards = (props) => {
   const { addItem } = useCart();
   return (
     <figure
-      className="card"
+      className="card animate__animated animate__slideInRight"
       style={{
         width: "225px",
         height: "auto",
