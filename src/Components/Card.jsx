@@ -2,6 +2,7 @@ import { Button } from "react-bootstrap";
 import InStock from "./InStock";
 import OutOfStock from "./OutOfStock";
 import { useCart } from "react-use-cart";
+import { memo } from "react";
 
 const Cards = (props) => {
   const { addItem } = useCart();
@@ -53,4 +54,4 @@ const Cards = (props) => {
   );
 };
 
-export default Cards;
+export default memo(Cards);
