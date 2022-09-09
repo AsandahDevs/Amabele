@@ -5,8 +5,10 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { NavLink } from "react-router-dom";
 import { Cart3 } from "react-bootstrap-icons";
 import { Badge } from "react-bootstrap";
+import { useCart } from "react-use-cart";
 
 const NavMenu = () => {
+  const { totalUniqueItems } = useCart();
   return (
     <Navbar bg="light" expand="md" className="mb-3 shadow">
       <Container fluid>
@@ -39,7 +41,7 @@ const NavMenu = () => {
                     color: "black",
                   }}
                 />
-                <Badge bg="secondary">0</Badge>
+                <Badge bg="secondary">{totalUniqueItems}</Badge>
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>
