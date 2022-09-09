@@ -32,7 +32,7 @@ a.nav-link:hover {
 .horizontal-scroller {
   display: flex;
   flex-wrap: nowrap;
-  cursor: grab;
+  cursor: default;
   overflow-x: scroll; /*Keeps the ability to scroll horizontally*/
 }
 
