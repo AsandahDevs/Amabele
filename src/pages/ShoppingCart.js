@@ -76,7 +76,7 @@ const ShoppingCart = () => {
               fontSize: "1.5rem",
             }}
           >
-            Cart total:R {cartTotal}
+            Cart total:R {cartTotal.toFixed(2)}
           </h3>
           <Button
             size="sm"
