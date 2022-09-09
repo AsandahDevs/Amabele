@@ -9,6 +9,12 @@ This website is built to demonstrate the logic and functionality behind a typica
 * React
 * Node.js
 
+## Preview
+
+<img src="https://user-images.githubusercontent.com/89397749/189449952-d7d4d93e-b1f9-4351-bafa-25728b347761.png" alt="preview image" width="300px" height="500px"/>
+
+https://user-images.githubusercontent.com/89397749/189449902-e0921e21-962f-4138-aadb-2d2a52077b14.mp4
+
 ## License
 
 MIT License
