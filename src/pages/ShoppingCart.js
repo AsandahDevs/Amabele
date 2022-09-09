@@ -14,7 +14,7 @@ const ShoppingCart = () => {
   } = useCart();
   return (
     <Container fluid>
-      <h1>Shopping cart page</h1>
+      <h1>Shopping cart</h1>
       {isEmpty ? (
         <h2 style={{ color: "red" }}>Cart is empty</h2>
       ) : (
@@ -70,7 +70,7 @@ const ShoppingCart = () => {
           </div>
           <h3
             style={{
-              color: "GrayText",
+              color: "white",
               fontSize: "1.5rem",
             }}
           >
