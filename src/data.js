@@ -267,7 +267,7 @@ const data = {
     {
       id: 28,
       name: "Savanna dry cider",
-      category: "wine",
+      category: "cider",
       price: 18.99,
       litres: "330ml",
       available: true,
@@ -296,7 +296,7 @@ const data = {
     {
       id: 31,
       name: "Smirnoff raspberry and pomegranate cider",
-      category: "wine",
+      category: "cider",
       price: null,
       litres: "750ml",
       available: false,
