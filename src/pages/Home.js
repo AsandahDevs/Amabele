@@ -20,7 +20,7 @@ const Home = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (formData.password === formData.confirmPassword) {
-      navigate("/products");
+      navigate("/Amabele/products");
     } else {
       alert("Passwords do not match");
     }
