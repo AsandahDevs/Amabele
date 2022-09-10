@@ -53,3 +53,24 @@ a.nav-link:hover {
 }
 
 /*End */
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: 10vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
