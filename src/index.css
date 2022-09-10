@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/public/Images/overflowing_beer.jpg");
+  background-image: url("/public/Images/overflowing_beer.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
