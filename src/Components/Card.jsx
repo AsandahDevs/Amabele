@@ -8,12 +8,9 @@ const Cards = (props) => {
   const { addItem } = useCart();
   return (
     <figure
-      className="card animate__animated animate__slideInRight"
+      className="card animate__animated animate__slideInRight swiper-slide"
       style={{
-        width: "225px",
-        height: "auto",
-        marginRight: "1rem",
-        marginTop: "2rem",
+        width: "180px",
       }}
     >
       <img
