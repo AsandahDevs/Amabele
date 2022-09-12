@@ -3,6 +3,12 @@ import { useState } from "react";
 import { Container } from "react-bootstrap";
 import Cards from "../Components/Card";
 import data from "../data";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/a11y";
+import "../index.css";
+import { A11y, Pagination } from "swiper";
 
 const Products = () => {
   const { products } = data;
@@ -44,23 +50,49 @@ const Products = () => {
       />
       <br />
       <h2 style={{ marginTop: "2rem" }}>Product ranges</h2>
-      <div className="horizontal-scroller">
+      <Swiper
+        modules={[A11y, Pagination]}
+        slidesPerView={1}
+        spaceBetween={10}
+        grabCursor={true}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }}
+        className="mySwiper"
+      >
         {filteredProducts.length === 0
           ? "no results found"
           : filteredProducts.map((item) => (
-              <Cards
-                key={item.id}
-                image={item.image}
-                alt={item.name}
-                price={item.price}
-                description={item.name}
-                litres={item.litres}
-                category={item.category}
-                available={item.available}
-                item={item}
-              />
+              <SwiperSlide key={item.id}>
+                <Cards
+                  key={item.id}
+                  image={item.image}
+                  alt={item.name}
+                  price={item.price}
+                  description={item.name}
+                  litres={item.litres}
+                  category={item.category}
+                  available={item.available}
+                  item={item}
+                />
+              </SwiperSlide>
             ))}
-      </div>
+      </Swiper>
     </Container>
   );
 };
