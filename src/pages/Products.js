@@ -1,15 +1,12 @@
-// import { useState } from "react";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import Cards from "../Components/Card";
 import data from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-cards";
-// import "swiper/css/pagination";
-// import "swiper/css/a11y";
+import "swiper/css/pagination";
 import "../index.css";
-import { EffectCards } from "swiper";
+import { Pagination } from "swiper";
 
 const Products = () => {
   const { products } = data;
@@ -52,9 +49,32 @@ const Products = () => {
       <br />
       <h2 style={{ marginTop: "2rem" }}>Product ranges</h2>
       <Swiper
-        modules={[EffectCards]}
-        effect={"cards"}
-        grabCursor={true}
+        modules={[Pagination]}
+        slidesPerView={3}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={false}
+        loopFillGroupWithBlank={false}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }}
         className="mySwiper"
       >
         {filteredProducts.length === 0
