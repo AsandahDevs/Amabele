@@ -5,10 +5,11 @@ import Cards from "../Components/Card";
 import data from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/a11y";
+import "swiper/css/effect-cards";
+// import "swiper/css/pagination";
+// import "swiper/css/a11y";
 import "../index.css";
-import { A11y, Pagination } from "swiper";
+import { EffectCards } from "swiper";
 
 const Products = () => {
   const { products } = data;
@@ -51,28 +52,9 @@ const Products = () => {
       <br />
       <h2 style={{ marginTop: "2rem" }}>Product ranges</h2>
       <Swiper
-        modules={[A11y, Pagination]}
-        slidesPerView={1}
-        spaceBetween={10}
+        modules={[EffectCards]}
+        effect={"cards"}
         grabCursor={true}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          // when window width is >= 320px
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          // when window width is >= 480px
-          480: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-        }}
         className="mySwiper"
       >
         {filteredProducts.length === 0
