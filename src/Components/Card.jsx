@@ -7,17 +7,12 @@ import { memo } from "react";
 const Cards = (props) => {
   const { addItem } = useCart();
   return (
-    <figure
-      className="card animate__animated animate__slideInRight swiper-slide"
-      style={{
-        width: "180px",
-      }}
-    >
+    <figure className="card animate__animated animate__slideInRight swiper-slide">
       <img
         src={props.image}
         loading="lazy"
         alt={props.alt}
-        style={{ height: "10rem", objectFit: "contain" }}
+        style={{ height: "10rem", objectFit: "contain", marginTop: "0.5rem" }}
         className="card-img-top"
       />
       <h2 className="text-black">R{props.price}</h2>
