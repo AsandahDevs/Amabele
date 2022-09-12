@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Amabele/static/css/main.1890be21.css",
-    "main.js": "/Amabele/static/js/main.81184497.js",
+    "main.css": "/Amabele/static/css/main.0d2e15c6.css",
+    "main.js": "/Amabele/static/js/main.6769be3d.js",
     "static/media/overflowing_beer.webp": "/Amabele/static/media/overflowing_beer.42d7b5a72690775efa19.webp",
     "index.html": "/Amabele/index.html",
-    "main.1890be21.css.map": "/Amabele/static/css/main.1890be21.css.map",
-    "main.81184497.js.map": "/Amabele/static/js/main.81184497.js.map"
+    "main.0d2e15c6.css.map": "/Amabele/static/css/main.0d2e15c6.css.map",
+    "main.6769be3d.js.map": "/Amabele/static/js/main.6769be3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1890be21.css",
-    "static/js/main.81184497.js"
+    "static/css/main.0d2e15c6.css",
+    "static/js/main.6769be3d.js"
   ]
 }
