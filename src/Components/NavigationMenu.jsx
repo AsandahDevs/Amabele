@@ -14,10 +14,10 @@ const NavMenu = () => {
       <Container fluid>
         <Navbar.Brand as={NavLink} to="/Amabele/">
           <img
-            src={"https://asandahdevs.github.io/Amabele/Images/Beer_hop.webp"}
-            alt="Beer_hop"
+            src={"https://asandahdevs.github.io/Amabele/Images/Beer_mugs.webp"}
+            alt="Beer_mugs"
             height={30}
-            style={{ borderRadius: "50%" }}
+            style={{ borderRadius: "50%", width: "auto" }}
           />{" "}
           Amabele
         </Navbar.Brand>
