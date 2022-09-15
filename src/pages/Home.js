@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { EyeSlashFill, EyeFill } from "react-bootstrap-icons";
 
 const Home = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
     confirmPassword: "",
+    showPassword: false,
+    showConfirmPassword: false,
   });
 
   const handleChange = (event) => {
@@ -15,6 +18,20 @@ const Home = () => {
     });
   };
 
+  const handlePasswordChange = () => {
+    setFormData((initialFormData) => {
+      return { ...initialFormData, showPassword: !formData.showPassword };
+    });
+  };
+
+  const handlePasswordChange2 = () => {
+    setFormData((initialFormData) => {
+      return {
+        ...initialFormData,
+        showConfirmPassword: !formData.showConfirmPassword,
+      };
+    });
+  };
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -45,28 +62,38 @@ const Home = () => {
         <br />
         <label style={{ marginTop: "2rem" }}>
           Password
-          <input
-            type="password"
-            name="password"
-            className="form-control"
-            placeholder="***"
-            onChange={handleChange}
-            value={formData.password}
-            required
-          />
+          <div className="input-group">
+            <input
+              type={formData.showPassword ? "text" : "password"}
+              name="password"
+              className="form-control"
+              placeholder="***"
+              onChange={handleChange}
+              value={formData.password}
+              required
+            />
+            <span className="input-group-text" onClick={handlePasswordChange}>
+              {formData.showPassword ? <EyeFill /> : <EyeSlashFill />}
+            </span>
+          </div>
         </label>
         <br />
         <label style={{ marginTop: "2rem" }}>
           Confirm password
-          <input
-            type="password"
-            name="confirmPassword"
-            className="form-control"
-            placeholder="***"
-            onChange={handleChange}
-            value={formData.confirmPassword}
-            required
-          />
+          <div className="input-group">
+            <input
+              type={formData.showConfirmPassword ? "text" : "password"}
+              name="confirmPassword"
+              className="form-control"
+              placeholder="***"
+              onChange={handleChange}
+              value={formData.confirmPassword}
+              required
+            />
+            <span className="input-group-text" onClick={handlePasswordChange2}>
+              {formData.showConfirmPassword ? <EyeFill /> : <EyeSlashFill />}
+            </span>
+          </div>
         </label>
         <br />
         <label style={{ marginTop: "2rem" }}>
