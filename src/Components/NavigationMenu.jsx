@@ -9,6 +9,7 @@ import { useCart } from "react-use-cart";
 
 const NavMenu = () => {
   const { totalUniqueItems } = useCart();
+
   return (
     <Navbar bg="light" expand="md" className="mb-3 shadow">
       <Container fluid>
@@ -38,7 +39,6 @@ const NavMenu = () => {
                   style={{
                     height: "2rem",
                     width: "1.5rem",
-                    color: "black",
                   }}
                 />
                 <Badge bg="secondary">{totalUniqueItems}</Badge>
