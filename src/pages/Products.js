@@ -7,8 +7,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../index.css";
 import { Pagination } from "swiper";
+import {
+  BrightnessAltHighFill,
+  CloudSunFill,
+  CloudMoonFill,
+  EmojiDizzyFill,
+} from "react-bootstrap-icons";
+//import react bootstrap icons to display icons depending on the time of day.
 
-const Products = () => {
+const Products = (props) => {
   const { products } = data;
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -23,22 +30,38 @@ const Products = () => {
   const date = new Date();
   const hours = date.getHours();
 
+  let emoji;
+
+  if (hours >= 5 && hours <= 12) {
+    emoji = (
+      <BrightnessAltHighFill style={{ fontSize: "1.5rem", color: "yellow" }} />
+    );
+  } else if (hours > 12 && hours <= 17) {
+    emoji = <CloudSunFill style={{ fontSize: "1.5rem", color: "yellow" }} />;
+  } else if (hours > 17 && hours <= 23) {
+    emoji = <CloudMoonFill style={{ fontSize: "1.5rem", color: "blue" }} />;
+  } else {
+    emoji = <EmojiDizzyFill style={{ fontSize: "1.5rem", color: "pink" }} />;
+  }
+
   let day = "";
 
   if (hours >= 5 && hours <= 12) {
-    day += "Good Morning, Sir/Madam ";
+    day += `Good Morning, ${props.formData.username}`;
   } else if (hours > 12 && hours <= 17) {
-    day += "Good day, Sir/Madam";
+    day += `Good day, ${props.formData.username}`;
   } else if (hours > 17 && hours <= 23) {
-    day += "Good Evening,Sir/Madam";
+    day += `Good Evening, ${props.formData.username}`;
   } else {
-    day += "Looks like someone is working night shifts.";
+    day += `Shouldn't you be asleep,${props.formData.username}?`;
   }
 
   return (
     <Container fluid>
       <h1>Our products</h1>
-      <h2 style={{ color: "gray", fontSize: "small" }}>{day}</h2>
+      <h2 style={{ color: "gray", fontSize: "large" }}>
+        {day} {emoji}
+      </h2>
       <input
         type="search"
         value={searchTerm}
@@ -79,21 +102,23 @@ const Products = () => {
       >
         {filteredProducts.length === 0
           ? "no results found"
-          : filteredProducts.map((item) => (
-              <SwiperSlide key={item.id}>
-                <Cards
-                  key={item.id}
-                  image={item.image}
-                  alt={item.name}
-                  price={item.price}
-                  description={item.name}
-                  litres={item.litres}
-                  category={item.category}
-                  available={item.available}
-                  item={item}
-                />
-              </SwiperSlide>
-            ))}
+          : filteredProducts.map((item) => {
+              return (
+                <SwiperSlide key={item.id}>
+                  <Cards
+                    key={item.id}
+                    image={item.image}
+                    alt={item.name}
+                    price={item.price}
+                    description={item.name}
+                    litres={item.litres}
+                    category={item.category}
+                    available={item.available}
+                    item={item}
+                  />
+                </SwiperSlide>
+              );
+            })}
       </Swiper>
     </Container>
   );
