@@ -34,14 +34,14 @@ const Products = (props) => {
 
   if (hours >= 5 && hours <= 12) {
     emoji = (
-      <BrightnessAltHighFill style={{ fontSize: "1.5rem", color: "yellow" }} />
+      <BrightnessAltHighFill style={{ fontSize: "1rem", color: "yellow" }} />
     );
   } else if (hours > 12 && hours <= 17) {
-    emoji = <CloudSunFill style={{ fontSize: "1.5rem", color: "yellow" }} />;
+    emoji = <CloudSunFill style={{ fontSize: "1rem", color: "yellow" }} />;
   } else if (hours > 17 && hours <= 23) {
-    emoji = <CloudMoonFill style={{ fontSize: "1.5rem", color: "blue" }} />;
+    emoji = <CloudMoonFill style={{ fontSize: "1rem", color: "blue" }} />;
   } else {
-    emoji = <EmojiDizzyFill style={{ fontSize: "1.5rem", color: "pink" }} />;
+    emoji = <EmojiDizzyFill style={{ fontSize: "1rem", color: "pink" }} />;
   }
 
   let day = "";
