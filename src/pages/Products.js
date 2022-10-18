@@ -59,7 +59,7 @@ const Products = (props) => {
   return (
     <Container fluid>
       <h1>Our products</h1>
-      <h2 style={{ color: "whitesmoke", fontSize: "large" }}>
+      <h2 style={{ color: "whitesmoke", fontSize: "medium" }}>
         {day} {emoji}
       </h2>
       <input
