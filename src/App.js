@@ -3,6 +3,7 @@ import SharedLayout from "./pages/SharedLayout";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ShoppingCart from "./pages/ShoppingCart";
+import ErrorPage from "./pages/ErrorPage";
 import { CartProvider } from "react-use-cart";
 import { useState } from "react";
 
@@ -40,7 +41,7 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/Amabele" element={<SharedLayout />}>
+          <Route path="/Amabele/" element={<SharedLayout />}>
             <Route
               index
               element={
@@ -54,6 +55,7 @@ function App() {
             />
             <Route path="products" element={<Products formData={formData} />} />
             <Route path="shoppingcart" element={<ShoppingCart />} />
+            <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
