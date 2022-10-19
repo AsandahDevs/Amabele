@@ -10,7 +10,7 @@ import { Pagination } from "swiper";
 import {
   BrightnessAltHighFill,
   CloudSunFill,
-  CloudMoonFill,
+  MoonStarsFill,
   EmojiDizzyFill,
 } from "react-bootstrap-icons";
 //import react bootstrap icons to display icons depending on the time of day.
@@ -39,7 +39,7 @@ const Products = (props) => {
   } else if (hours > 12 && hours <= 17) {
     emoji = <CloudSunFill style={{ fontSize: "1rem", color: "yellow" }} />;
   } else if (hours > 17 && hours <= 23) {
-    emoji = <CloudMoonFill style={{ fontSize: "1rem", color: "blue" }} />;
+    emoji = <MoonStarsFill style={{ fontSize: "1rem", color: "blue" }} />;
   } else {
     emoji = <EmojiDizzyFill style={{ fontSize: "1rem", color: "pink" }} />;
   }
