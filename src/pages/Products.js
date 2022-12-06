@@ -18,6 +18,7 @@ import {
 const Products = (props) => {
   const { products } = data;
   const [searchTerm, setSearchTerm] = useState("");
+  const [category, setCategory] = useState("");
 
   const captureProductName = (event) => {
     setSearchTerm(event.target.value);
@@ -25,6 +26,14 @@ const Products = (props) => {
 
   const filteredProducts = products.filter((product) => {
     return product.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const captureCategory = (e) => {
+    setCategory(e.target.value);
+  };
+
+  const filteredProductsByCategory = products.filter((product) => {
+    return product.category.toLowerCase().includes(category.toLowerCase());
   });
 
   const date = new Date();
@@ -49,7 +58,7 @@ const Products = (props) => {
   if (hours >= 5 && hours <= 12) {
     day += `Good Morning, ${props.formData.username}`;
   } else if (hours > 12 && hours <= 17) {
-    day += `Good day, ${props.formData.username}`;
+    day += `Good Day, ${props.formData.username}`;
   } else if (hours > 17 && hours <= 23) {
     day += `Good Evening, ${props.formData.username}`;
   } else {
@@ -58,7 +67,7 @@ const Products = (props) => {
 
   return (
     <Container fluid>
-      <h1>Our products</h1>
+      <h1>Our Products</h1>
       <h2 style={{ color: "whitesmoke", fontSize: "medium" }}>
         {day} {emoji}
       </h2>
@@ -69,6 +78,15 @@ const Products = (props) => {
         placeholder="Enter product name"
         onChange={captureProductName}
       />
+      <br />
+      <select value={category} onChange={captureCategory}>
+        <option>Select by category</option>
+        <option>Cider</option>
+        <option>Whiskey</option>
+        <option>Vodka</option>
+        <option>Stout</option>
+        <option>Wine</option>
+      </select>
       <br />
       <h2 style={{ marginTop: "2rem" }}>Product ranges</h2>
       <Swiper
@@ -119,6 +137,31 @@ const Products = (props) => {
                 </SwiperSlide>
               );
             })}
+
+        {
+          /* Mapping through the filtered products based on the choice of catergory selected by a user.*/
+          /* BUG: The below code does not work alongside with the above search feature .*/
+
+          filteredProductsByCategory.length === 0
+            ? "no results found"
+            : filteredProductsByCategory.map((item) => {
+                return (
+                  <SwiperSlide key={item.id}>
+                    <Cards
+                      key={item.id}
+                      image={item.image}
+                      alt={item.name}
+                      price={item.price}
+                      description={item.name}
+                      litres={item.litres}
+                      category={item.category}
+                      available={item.available}
+                      item={item}
+                    />
+                  </SwiperSlide>
+                );
+              })
+        }
       </Swiper>
     </Container>
   );
