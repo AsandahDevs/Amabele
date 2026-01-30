@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Amabele/static/css/main.ec065de5.css",
+    "main.js": "/Amabele/static/js/main.b54de6f8.js",
+    "static/media/overflowing_beer.webp": "/Amabele/static/media/overflowing_beer.42d7b5a72690775efa19.webp",
+    "index.html": "/Amabele/index.html",
+    "main.ec065de5.css.map": "/Amabele/static/css/main.ec065de5.css.map",
+    "main.b54de6f8.js.map": "/Amabele/static/js/main.b54de6f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec065de5.css",
+    "static/js/main.b54de6f8.js"
+  ]
+}
