@@ -25,7 +25,6 @@ const Products = (props) => {
   };
 
   const filteredProducts = products.filter((product) => {
-    debugger
     if (searchTerm.toLowerCase() === product.name.toLowerCase() && category.toLowerCase() === product.category.toLowerCase()) {
       return product;
     }else if(searchTerm.toLowerCase() === product.name.toLowerCase()) {

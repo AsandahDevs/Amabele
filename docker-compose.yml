@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: npm run dev
+    command: nodemon --legacy-watch --ignore build --exec "npm run dev"
     ports:
       - "3000:3000"
     volumes:
@@ -13,8 +13,3 @@ services:
       - ./package-lock.json:/app/package-lock.json
     environment:
       NODE_ENV: development
-    develop:
-      watch:
-        - action: sync
-          path: ./src
-          target: /app/src
