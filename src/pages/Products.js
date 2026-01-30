@@ -25,16 +25,21 @@ const Products = (props) => {
   };
 
   const filteredProducts = products.filter((product) => {
-    return product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    debugger
+    if (searchTerm.toLowerCase() === product.name.toLowerCase() && category.toLowerCase() === product.category.toLowerCase()) {
+      return product;
+    }else if(searchTerm.toLowerCase() === product.name.toLowerCase()) {
+      return product;
+    }else if(category.toLowerCase() === product.category.toLowerCase()) {
+      return product;
+    }else {
+      return false;
+    }
   });
 
   const captureCategory = (e) => {
     setCategory(e.target.value);
   };
-
-  const filteredProductsByCategory = products.filter((product) => {
-    return product.category.toLowerCase().includes(category.toLowerCase());
-  });
 
   const date = new Date();
   const hours = date.getHours();
@@ -138,30 +143,7 @@ const Products = (props) => {
               );
             })}
 
-        {
-          /* Mapping through the filtered products based on the choice of catergory selected by a user.*/
-          /* BUG: The below code does not work alongside with the above search feature .*/
-
-          filteredProductsByCategory.length === 0
-            ? "no results found"
-            : filteredProductsByCategory.map((item) => {
-                return (
-                  <SwiperSlide key={item.id}>
-                    <Cards
-                      key={item.id}
-                      image={item.image}
-                      alt={item.name}
-                      price={item.price}
-                      description={item.name}
-                      litres={item.litres}
-                      category={item.category}
-                      available={item.available}
-                      item={item}
-                    />
-                  </SwiperSlide>
-                );
-              })
-        }
+       
       </Swiper>
     </Container>
   );
