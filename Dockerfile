@@ -1,5 +1,5 @@
 # Development Dockerfile
-FROM node:18-slim
+FROM node:18-bullseye-slim
 
 WORKDIR /app
 
