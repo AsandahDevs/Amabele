@@ -41,7 +41,7 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/Amabele/" element={<SharedLayout />}>
+          <Route path="/" element={<SharedLayout />}>
             <Route
               index
               element={

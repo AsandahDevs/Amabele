@@ -25,15 +25,10 @@ const Products = (props) => {
   };
 
   const filteredProducts = products.filter((product) => {
-    if (searchTerm.toLowerCase() === product.name.toLowerCase() && category.toLowerCase() === product.category.toLowerCase()) {
-      return product;
-    }else if(searchTerm.toLowerCase() === product.name.toLowerCase()) {
-      return product;
-    }else if(category.toLowerCase() === product.category.toLowerCase()) {
-      return product;
-    }else {
-      return false;
-    }
+    const productName = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const categoryName = category === "" || category === "Select by category" || product.category.toLowerCase() === category.toLowerCase();
+
+    return productName && categoryName;
   });
 
   const captureCategory = (e) => {
@@ -84,7 +79,7 @@ const Products = (props) => {
       />
       <br />
       <select value={category} onChange={captureCategory}>
-        <option>Select by category</option>
+        <option value="">Select by category</option>
         <option>Cider</option>
         <option>Whiskey</option>
         <option>Vodka</option>
