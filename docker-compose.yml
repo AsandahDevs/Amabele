@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: nodemon --legacy-watch --ignore build --exec "npm run dev"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+    environment:
+      NODE_ENV: development
+      WDS_SOCKET_HOST: host.docker.internal
+      WDS_SOCKET_PORT: 3000
