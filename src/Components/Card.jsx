@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import InStock from "./InStock";
 import OutOfStock from "./OutOfStock";
-import { addItem } from "../../features/cart/cart";
+import { addItem } from "../features/cart/cart";
 import { memo } from "react";
 import { useDispatch } from "react-redux";
 

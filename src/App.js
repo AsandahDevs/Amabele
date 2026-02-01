@@ -5,7 +5,7 @@ import Products from "./pages/Products";
 import ShoppingCart from "./pages/ShoppingCart";
 import ErrorPage from "./pages/ErrorPage";
 import { useState } from "react";
-import store from "../store/store";
+import store from "./store/store";
 import { Provider } from "react-redux";
 import { Cart } from "react-bootstrap-icons";
 
