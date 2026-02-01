@@ -4,9 +4,9 @@ import { Cart4 } from "react-bootstrap-icons";
 import { useSelector, useDispatch} from "react-redux";
 import { removeItem, increaseQty, decreaseQty,clearCart } from "../features/cart/cart";
 
-const ShoppingCart = (data) => {
-  console.log(data);
+const ShoppingCart = () => {
   const cartdata = useSelector((state) => state.cart);
+  console.log(cartdata);
   const dispatch = useDispatch();
   const isEmpty = cartdata.length === 0;
   const cartTotal = cartdata.reduce((total, item) => {
@@ -23,9 +23,9 @@ const ShoppingCart = (data) => {
           <div className="table-responsive">
             <table className="table table-dark table-hover table-striped ">
               <tbody>
-                {data.products.map((item) => {
+                {cartdata.map((item) => {
                   return (
-                    <tr key={item.id}>
+                    <tr key={item.item.id}>
                       <td>
                         <img
                           src={item.image}
