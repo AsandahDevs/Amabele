@@ -6,7 +6,6 @@ import { removeItem, increaseQty, decreaseQty,clearCart } from "../features/cart
 
 const ShoppingCart = () => {
   const cartdata = useSelector((state) => state.cart);
-  console.log(cartdata);
   const dispatch = useDispatch();
   const isEmpty = cartdata.length === 0;
   const cartTotal = cartdata.reduce((total, item) => {
@@ -25,7 +24,7 @@ const ShoppingCart = () => {
               <tbody>
                 {cartdata.map((item) => {
                   return (
-                    <tr key={item.item.id}>
+                    <tr key={item.id}>
                       <td>
                         <img
                           src={item.image}
