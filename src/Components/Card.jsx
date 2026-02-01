@@ -1,32 +1,33 @@
 import { Button } from "react-bootstrap";
 import InStock from "./InStock";
 import OutOfStock from "./OutOfStock";
-import { useCart } from "react-use-cart";
+import { addItem } from "../features/cart/cart";
 import { memo } from "react";
+import { useDispatch } from "react-redux";
 
-const Cards = (props) => {
-  const { addItem } = useCart();
+const Cards = ({alt, image, price, category, description, litres, available, item}) => {
+  const dispatch = useDispatch();
   return (
     <figure className="card animate__animated animate__slideInRight swiper-slide">
       <img
-        src={props.image}
+        src={image}
         loading="lazy"
-        alt={props.alt}
+        alt={alt}
         style={{ height: "10rem", objectFit: "contain", marginTop: "0.5rem" }}
         className="card-img-top"
       />
-      <h2 className="text-black">R{props.price}</h2>
+      <h2 className="text-black">R{price}</h2>
       <h3 style={{ fontSize: "medium", color: "grey" }}>
-        Category:{props.category}
+        Category:{category}
       </h3>
       <figcaption className="card-body text-black">
-        {props.description} {props.litres}
+        {description} {litres}
       </figcaption>
 
-      {props.available ? <InStock /> : <OutOfStock />}
-      {props.available ? (
+      {available ? <InStock /> : <OutOfStock />}
+      {available ? (
         <Button
-          onClick={() => addItem(props.item)}
+          onClick={() => dispatch(addItem(item))}
           variant="dark"
           style={{
             borderRadius: "3rem",

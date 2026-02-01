@@ -1,17 +1,17 @@
 import { Button, Container } from "react-bootstrap";
-import { useCart } from "react-use-cart";
 import { Badge } from "react-bootstrap";
 import { Cart4 } from "react-bootstrap-icons";
+import { useSelector, useDispatch} from "react-redux";
+import { removeItem, increaseQty, decreaseQty,clearCart } from "../features/cart/cart";
 
 const ShoppingCart = () => {
-  const {
-    isEmpty,
-    items,
-    cartTotal,
-    updateItemQuantity,
-    removeItem,
-    emptyCart,
-  } = useCart();
+  const cartdata = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const isEmpty = cartdata.length === 0;
+  const cartTotal = cartdata.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+
   return (
     <Container fluid>
       <h1>Shopping cart</h1>
@@ -22,7 +22,7 @@ const ShoppingCart = () => {
           <div className="table-responsive">
             <table className="table table-dark table-hover table-striped ">
               <tbody>
-                {items.map((item) => {
+                {cartdata.map((item) => {
                   return (
                     <tr key={item.id}>
                       <td>
@@ -39,7 +39,7 @@ const ShoppingCart = () => {
                         <Button
                           size="sm"
                           onClick={() =>
-                            updateItemQuantity(item.id, item.quantity + 1)
+                            dispatch(increaseQty(item))
                           }
                         >
                           +
@@ -49,7 +49,7 @@ const ShoppingCart = () => {
                           size="sm"
                           variant="outline-warning"
                           onClick={() =>
-                            updateItemQuantity(item.id, item.quantity - 1)
+                            dispatch(decreaseQty(item))
                           }
                         >
                           -
@@ -58,7 +58,7 @@ const ShoppingCart = () => {
                       <td>
                         <Badge
                           bg="danger"
-                          onClick={() => removeItem(item.id)}
+                          onClick={() => dispatch(removeItem(item))}
                           style={{ cursor: "pointer" }}
                         >
                           x
@@ -81,7 +81,7 @@ const ShoppingCart = () => {
           <Button
             size="sm"
             className="btn btn-danger"
-            onClick={() => emptyCart()}
+            onClick={() => dispatch(clearCart())}
           >
             Clear cart <Cart4 />
           </Button>

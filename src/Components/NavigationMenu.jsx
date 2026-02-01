@@ -5,10 +5,10 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { NavLink } from "react-router-dom";
 import { Cart3 } from "react-bootstrap-icons";
 import { Badge } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+import { useSelector } from "react-redux";
 
 const NavMenu = () => {
-  const { totalUniqueItems } = useCart();
+  const totalUniqueItems = useSelector((state) => state.cart.length);
 
   return (
     <Navbar bg="light" expand="md" className="mb-3 shadow">

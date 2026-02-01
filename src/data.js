@@ -7,6 +7,7 @@ const data = {
       price: 289.99,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image: "https://asandahdevs.github.io/Amabele/Images/Absolut_vodka.webp",
     },
     {
@@ -16,6 +17,7 @@ const data = {
       price: 164.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Amarula_fruit_cream.webp",
     },
@@ -26,6 +28,7 @@ const data = {
       price: 229.0,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image: "https://asandahdevs.github.io/Amabele/Images/Bains_whiskey.webp",
     },
     {
@@ -35,6 +38,7 @@ const data = {
       price: 259.0,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Ballantine_whiskey.webp",
     },
@@ -45,6 +49,7 @@ const data = {
       price: 85.0,
       litres: "275ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Bernini_Blush_cider.webp",
     },
@@ -55,6 +60,7 @@ const data = {
       price: 34.99,
       litres: "440ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Black_river_coffee_stout.webp",
     },
@@ -65,6 +71,7 @@ const data = {
       price: 79.99,
       litres: "275ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Brutal_fruit_cider.webp",
     },
@@ -75,6 +82,7 @@ const data = {
       price: 21.99,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Castle_Milk_Stout_chocolate.webp",
     },
@@ -85,6 +93,7 @@ const data = {
       price: 529.0,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image: "https://asandahdevs.github.io/Amabele/Images/Ciroc_Vodka.webp",
     },
     {
@@ -94,6 +103,7 @@ const data = {
       price: 259.0,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image: "https://asandahdevs.github.io/Amabele/Images/Cruz_Vodka.webp",
     },
     {
@@ -103,6 +113,7 @@ const data = {
       price: 48,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image: "https://asandahdevs.github.io/Amabele/Images/Drostdy_hof.webp",
     },
     {
@@ -112,6 +123,7 @@ const data = {
       price: 99.99,
       litres: "1.5L",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/four_cousins_red_wine.webp",
     },
@@ -122,6 +134,7 @@ const data = {
       price: 52.99,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Four_cousins_White_Wine.webp",
     },
@@ -132,6 +145,7 @@ const data = {
       price: 139.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Fourth_Street_Red_Wine.webp",
     },
@@ -142,6 +156,7 @@ const data = {
       price: 60,
       litres: "600ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Guiness_foreign_extra_stout.webp",
     },
@@ -152,6 +167,7 @@ const data = {
       price: 24.99,
       litres: "660ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/hunters_dry_cider.webp",
     },
@@ -162,6 +178,7 @@ const data = {
       price: 16.99,
       litres: "330ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/hunters_gold_cider.webp",
     },
@@ -172,6 +189,7 @@ const data = {
       price: 299.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Jack_Daniels_Whiskey.webp",
     },
@@ -182,6 +200,7 @@ const data = {
       price: 369.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Jameson_irish_whiskey.webp",
     },
@@ -192,6 +211,7 @@ const data = {
       price: 519.99,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Johnnie_Walker_Black_Label_Whiskey.webp",
     },
@@ -202,6 +222,7 @@ const data = {
       price: 344.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/johnnie_walker_red_label_blended_scotch_whisky.webp",
     },
@@ -212,6 +233,7 @@ const data = {
       price: 154.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Red_square_vodka.webp",
     },
@@ -222,6 +244,7 @@ const data = {
       price: 54.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Robertson_Natural_Sweet_Red_Wine.webp",
     },
@@ -232,6 +255,7 @@ const data = {
       price: null,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image: "https://asandahdevs.github.io/Amabele/Images/Rose_cider.webp",
     },
     {
@@ -241,6 +265,7 @@ const data = {
       price: 154.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Russian_bear_Vodka.webp",
     },
@@ -251,6 +276,7 @@ const data = {
       price: 44.99,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Saint_Joseph_Red_Wine.webp",
     },
@@ -261,6 +287,7 @@ const data = {
       price: 44.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Saint_Rapheal_Red_Wine.webp",
     },
@@ -271,6 +298,7 @@ const data = {
       price: 18.99,
       litres: "330ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/SAVANNA_DRY_CIDER.webp",
     },
@@ -281,6 +309,7 @@ const data = {
       price: 249.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image: "https://asandahdevs.github.io/Amabele/Images/Skyy_Vodka.webp",
     },
     {
@@ -290,6 +319,7 @@ const data = {
       price: 149.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/smirnoff_1818_vodka.webp",
     },
@@ -300,6 +330,7 @@ const data = {
       price: null,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/smirnoff_rasberryy_and_promegranite_cider.webp",
     },
@@ -310,6 +341,7 @@ const data = {
       price: 94.99,
       litres: "330ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/strongbow_small_rose cider.webp",
     },
@@ -320,6 +352,7 @@ const data = {
       price: 539.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/The_glenlivet_single_malt_scotch_whiskey.webp",
     },
@@ -330,6 +363,7 @@ const data = {
       price: 124.99,
       litres: "750ml",
       available: true,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/three_ships_mash_tun.webp",
     },
@@ -340,6 +374,7 @@ const data = {
       price: 48.99,
       litres: "750ml",
       available: false,
+      quantity: 1,
       image:
         "https://asandahdevs.github.io/Amabele/Images/Two_Oceans_Sauvignon_Blanc_White_Wine.webp",
     },
