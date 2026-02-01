@@ -8,6 +8,7 @@ import { useState } from "react";
 import store from "./store/store";
 import { Provider } from "react-redux";
 import { Cart } from "react-bootstrap-icons";
+import data from "./data";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -43,7 +44,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/Amabele/" element={<SharedLayout />}>
+          <Route path="/" element={<SharedLayout />}>
             <Route
               index
               element={
@@ -56,7 +57,7 @@ function App() {
               }
             />
             <Route path="products" element={<Products formData={formData} />} />
-            <Route path="shoppingcart" element={<ShoppingCart />} />
+            <Route path="shoppingcart" element={<ShoppingCart data={data} />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>

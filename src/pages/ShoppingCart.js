@@ -2,12 +2,14 @@ import { Button, Container } from "react-bootstrap";
 import { Badge } from "react-bootstrap";
 import { Cart4 } from "react-bootstrap-icons";
 import { useSelector, useDispatch} from "react-redux";
+import { removeItem, increaseQty, decreaseQty,clearCart } from "../features/cart/cart";
 
-const ShoppingCart = () => {
-  const cartItems = useSelector((state) => state.cart);
+const ShoppingCart = (data) => {
+  console.log(data);
+  const cartdata = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  const isEmpty = cartItems.length === 0;
-  const cartTotal = cartItems.reduce((total, item) => {
+  const isEmpty = cartdata.length === 0;
+  const cartTotal = cartdata.reduce((total, item) => {
     return total + item.price * item.quantity;
   }, 0);
 
@@ -21,7 +23,7 @@ const ShoppingCart = () => {
           <div className="table-responsive">
             <table className="table table-dark table-hover table-striped ">
               <tbody>
-                {items.map((item) => {
+                {data.products.map((item) => {
                   return (
                     <tr key={item.id}>
                       <td>
@@ -80,7 +82,7 @@ const ShoppingCart = () => {
           <Button
             size="sm"
             className="btn btn-danger"
-            onClick={() => emptyCart()}
+            onClick={() => dispatch(clearCart())}
           >
             Clear cart <Cart4 />
           </Button>
