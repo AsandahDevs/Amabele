@@ -42,7 +42,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<SharedLayout />}>
+          <Route path="/Amabele/" element={<SharedLayout />}>
             <Route
               index
               element={
@@ -54,8 +54,8 @@ function App() {
                 />
               }
             />
-            <Route path="/products" element={<Products formData={formData} />} />
-            <Route path="/shoppingcart" element={<ShoppingCart />} />
+            <Route path="products" element={<Products formData={formData} />} />
+            <Route path="shoppingcart" element={<ShoppingCart />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>

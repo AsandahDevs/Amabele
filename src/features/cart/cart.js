@@ -8,16 +8,16 @@ const cartSlice = createSlice({
       state.push(action.payload);
     },
     removeItem: (state, action) => {
-      return state.filter(item => item.id !== action.payload.id);
+      return state.filter(item => item.id !== action.payload);
     },
     increaseQty: (state, action) => {
-      const item = state.find(item => item.id === action.payload.id);
+      const item = state.find(item => item.id === action.payload);
       if (item) {
         item.quantity += 1;
       }
    },
    decreaseQty: (state,action) => {
-    const item = state.find(item => item.id === action.payload.id);
+    const item = state.find(item => item.id === action.payload);
     if (item && item.quantity > 1) {
       item.quantity -= 1;
    }
