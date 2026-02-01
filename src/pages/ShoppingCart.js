@@ -1,17 +1,16 @@
 import { Button, Container } from "react-bootstrap";
-import { useCart } from "react-use-cart";
 import { Badge } from "react-bootstrap";
 import { Cart4 } from "react-bootstrap-icons";
+import { useSelector, useDispatch} from "react-redux";
 
 const ShoppingCart = () => {
-  const {
-    isEmpty,
-    items,
-    cartTotal,
-    updateItemQuantity,
-    removeItem,
-    emptyCart,
-  } = useCart();
+  const cartItems = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const isEmpty = cartItems.length === 0;
+  const cartTotal = cartItems.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+
   return (
     <Container fluid>
       <h1>Shopping cart</h1>
@@ -39,7 +38,7 @@ const ShoppingCart = () => {
                         <Button
                           size="sm"
                           onClick={() =>
-                            updateItemQuantity(item.id, item.quantity + 1)
+                            dispatch(increaseQty(item))
                           }
                         >
                           +
@@ -49,7 +48,7 @@ const ShoppingCart = () => {
                           size="sm"
                           variant="outline-warning"
                           onClick={() =>
-                            updateItemQuantity(item.id, item.quantity - 1)
+                            dispatch(decreaseQty(item))
                           }
                         >
                           -
@@ -58,7 +57,7 @@ const ShoppingCart = () => {
                       <td>
                         <Badge
                           bg="danger"
-                          onClick={() => removeItem(item.id)}
+                          onClick={() => dispatch(removeItem(item))}
                           style={{ cursor: "pointer" }}
                         >
                           x

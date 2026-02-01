@@ -1,11 +1,12 @@
 import { Button } from "react-bootstrap";
 import InStock from "./InStock";
 import OutOfStock from "./OutOfStock";
-import { useCart } from "react-use-cart";
+import { addItem } from "../../features/cart/cart";
 import { memo } from "react";
+import { useDispatch } from "react-redux";
 
 const Cards = (props) => {
-  const { addItem } = useCart();
+  const dispatch = useDispatch();
   return (
     <figure className="card animate__animated animate__slideInRight swiper-slide">
       <img
@@ -26,7 +27,7 @@ const Cards = (props) => {
       {props.available ? <InStock /> : <OutOfStock />}
       {props.available ? (
         <Button
-          onClick={() => addItem(props.item)}
+          onClick={() => dispatch(addItem(props))}
           variant="dark"
           style={{
             borderRadius: "3rem",

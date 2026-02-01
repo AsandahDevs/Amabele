@@ -4,8 +4,10 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ShoppingCart from "./pages/ShoppingCart";
 import ErrorPage from "./pages/ErrorPage";
-import { CartProvider } from "react-use-cart";
 import { useState } from "react";
+import store from "../store/store";
+import { Provider } from "react-redux";
+import { Cart } from "react-bootstrap-icons";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -38,7 +40,7 @@ function App() {
   };
 
   return (
-    <CartProvider>
+    <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path="/Amabele/" element={<SharedLayout />}>
@@ -59,7 +61,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </CartProvider>
+   </Provider>
   );
 }
 
