@@ -15,6 +15,11 @@ This website is built to demonstrate the logic and functionality behind a typica
 
 https://user-images.githubusercontent.com/89397749/189449902-e0921e21-962f-4138-aadb-2d2a52077b14.mp4
 
+## Deployment
+
+Run the following commands to ensure successful deployment of your code changes on github pages:
+`npm run deploy`
+
 ## License
 
 MIT License
